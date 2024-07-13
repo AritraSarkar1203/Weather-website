@@ -7,6 +7,7 @@ const apiKey="fecc35b0a74f57d2938d17a78381aec0";
 
 async function fetchLatLon(city) {
     const geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${apiKey}`;
+    const geoUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${apiKey}`;
     const response = await fetch(geoUrl);
     const data = await response.json();
     if (data.length > 0) {
